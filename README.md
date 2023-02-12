@@ -2,9 +2,9 @@
 A fully configuered pbxforce OpenVPN server with SSL Encryption for Ubuntu and other Debian based distros.
 This Script is written in BASH and tested on Ubuntu. Other Distros are being tested, script will be available as soon as finished.
 
-*** RUNNING THIS SCRIPT ON CLEAN INSTALL IS ADVISED ***
+*** RUNNING THIS SCRIPT ON CLEAN INSTALL AS ROOT IS ADVISED ***
 
-Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. From system update to all the required packages, everything will be done automatically. Just make suer you run the script as root.
+Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. From system update to all the required packages, everything will be done automatically.
 
 Simply run the bash script and follow the instructions.
 
