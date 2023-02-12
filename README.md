@@ -20,7 +20,7 @@ Additional script file 'append.sh' is used to combine the ecnryption key files a
 
 * However, if you want to merge your certificate/key files with your client VPN file and generate a single .ovpn client file, use 'append.sh' script under these parameters
     
-    bash append.sh <set-file-name> <ca.crt> <YourCertFileName.crt> <YourKeyFileName.key>
+        bash append.sh <set-file-name> <ca.crt> <YourCertFileName.crt> <YourKeyFileName.key>
 
 Make sure to run the script from the same directory where your key and certificate files are. A new file will be generated in the same folder.
 
