@@ -4,7 +4,7 @@ This Script is written in BASH and tested on Ubuntu. Other Distros are being tes
 
 *** RUNNING THIS SCRIPT ON CLEAN INSTALL IS ADVISED ***
 
-Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. From system update to all the required packages, everything will be done automatically.
+Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. From system update to all the required packages, everything will be done automatically. Just make suer you run the script as root.
 
 Simply run the bash script and follow the instructions.
 
