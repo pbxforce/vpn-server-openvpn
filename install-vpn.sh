@@ -314,7 +314,7 @@ then
 fi
 #Allowing ip-forward. It will enable ip-forward in real-time. But sometimes reboot is needed.
 #
-sysctl -w net.ipv4.ip_forward=0 2>/dev/null >/dev/null
+sysctl -w net.ipv4.ip_forward=1 2>/dev/null >/dev/null
 #
 #Enabling ip-forward in system control configurations for persistent change
 ip_fwd0=$(cat /etc/sysctl.conf | grep net.ipv4.ip_forward=0)
