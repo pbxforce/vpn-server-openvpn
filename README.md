@@ -11,7 +11,8 @@ Simply run the bash script and follow the instructions.
     bash install-vpn.sh
 
 For transparency and better understanding, list of all the required packages and necessary changings will be displayed on screen. Read the instructions carefully.
-Diffie-Hellman 2048-bit key process might take some time.
+
+* Diffie-Hellman 2048-bit key process might take some time. *
 
 After completing the installation process, client VPN file will be saved in the '/root' directory under the extension of '.ovpn'. Use that file to connect to the server.
 
