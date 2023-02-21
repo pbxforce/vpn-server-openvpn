@@ -1,8 +1,11 @@
 # openvpn-Install
-A fully configuered pbxforce OpenVPN server with SSL Encryption for Ubuntu and other Debian based distros.
-This Script is written in BASH and tested on Ubuntu. Other Distros are being tested, script will be available as soon as finished.
+A fully configuered pbxforce OpenVPN server with SSL Encryption for almost all major distros. Check the list of supported distributions:
 
-*** RUNNING THIS SCRIPT ON CLEAN INSTALL AS ROOT IS ADVISED ***
+            ubuntu
+
+Security and Privacy is Crucial nowdays. By keeping that in mind, this script is written in BASH with more transparency of what is being installed or changed in the system while installing the server.
+
+*** RUNNING THIS SCRIPT ON CLEAN INSTALL IS ADVISED. ROOT PRIVILEGES ARE NECESSARY FOR SUCCESSFULLY RUNNING THE SCRIPT ***
 
 Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. From system update to all the required packages, everything will be done automatically.
 
