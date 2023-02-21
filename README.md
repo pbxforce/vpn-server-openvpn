@@ -3,23 +3,23 @@ A fully configuered pbxforce OpenVPN server with SSL Encryption for almost all m
 
 ****Ubuntu, CentOS, Alpine, Redhat (RHEL), Linux Mint, PopOS, Rocky, Kali, Arch Linux, OpenSUSE (leap, tumbleweed, sles), Fedora, Amazon Linux.****
             
-Almost all Debian and fedora distros are supported. New distros are being added constantly.
+Almost all Debian and Fedora distros are supported. New distros are being added constantly.
 
-*** RUNNING THIS SCRIPT ON CLEAN INSTALL IS ADVISED. ROOT PRIVILEGES ARE NECESSARY FOR SUCCESSFULLY RUNNING THE SCRIPT ***
+** RUNNING THIS SCRIPT ON CLEAN INSTALL IS ADVISED. ROOT PRIVILEGES ARE NECESSARY TO INSTALL SERVER WITHUOT ERRORS **
 
-****For RHEL users:**** RHEL users needs Redhat subscriptions to install packages from repository. Get the RHEL subscription under developer plan for free and register the system before running the script. To register use command:
+****For RHEL users:**** RHEL users needs Redhat subscriptions to install packages from repository. Get the RHEL subscription and register the system before running the script. To register system, use command:
 
             subscription-manager register
 
-****For Alpine users:**** Alpine comes with 'sh' or 'ash'. There is higher probability of getting error while running this bash script using 'sh' or 'ash'. Users need to instal bash before running the script. Use command below to install bash:
+****For Alpine users:**** Alpine comes with 'sh' or 'ash'. There is higher probability of getting error while running this bash script using 'sh' or 'ash'. Users need to instaLl bash before running the script. Use command below to install bash:
 
             apk add bash
             
 Security and Privacy is Crucial nowdays. Keeping that in mind, this script is written in BASH with much more transparency of what is being installed or changed in the system while installing the server.
 
-Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. From system update to all the required packages, everything will be done automatically.
+* Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. Everything will be done automatically. Automatic system update is excluded because sometimes it takes too much time and it might not even necessary for the task. But you can update the system manually before running the script. It will reduce the script running time. If you get error in the inital packages installing phase, you should definatly perform system update and run the script again.
 
-Simply run the bash script and follow the instructions:
+****Simply run the bash script and follow the instructions:
 
             bash install-vpn.sh
 
