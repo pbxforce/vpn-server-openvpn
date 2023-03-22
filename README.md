@@ -9,7 +9,7 @@ Almost all Debian and Fedora distros are supported. New distros are being added 
 
 Simply run the bash script and follow the instructions: 
 
-            bash install-vpn.sh
+            sudo bash install-vpn.sh
 
 * Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. Everything will be done automatically. Automatic system update is excluded because sometimes it takes too much time and it might not even necessary for the task. But you can update the system manually before running the script. It will reduce the script running time. If you get error in the inital packages installing phase, you should definatly perform system update and run the script again.
 
@@ -29,7 +29,7 @@ For transparency and better understanding, list of all the required packages and
 
 Run the command and follow the instructions:
 
-            bash client.sh
+           sudo bash client.sh
 
 After completing the installation process, client VPN file will be saved in the current directory under the extension of '.ovpn'. Use that file to connect to the server.
 
@@ -37,7 +37,7 @@ Additional script file 'append.sh' is used to combine the encryption key files a
 
 * However, if you have some certificates/keys that you want to merge with your client VPN file and generate a single .ovpn client file, use 'append.sh' script under these parameters:
     
-             bash append.sh <set-file-name> <ca.crt> <YourCertFileName.crt> <YourKeyFileName.key>
+            sudo bash append.sh <set-file-name> <ca.crt> <YourCertFileName.crt> <YourKeyFileName.key>
 
 Make sure to run the script from the same directory where your key and certificate files are. A new file will be generated in the same directory.
     
