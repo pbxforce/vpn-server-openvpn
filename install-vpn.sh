@@ -797,7 +797,7 @@ echo "Copy this .ovpn file into your local machine and use it to connect to the 
 echo
 echo "************************************************************************************"
 echo
-echo -e "For Linux users: If you are using GUI mode, both GNOME and KDE have built-in VPN\nClient feature that you can use to connect to vpn simply by importing your .ovpn file.\nIf you are using CLI, then you should install 'openvpn' packege and\nthen use command: openvpn <client-file-path>"
+echo -e "For Linux users: If you are using GUI mode, both GNOME and KDE have built-in VPN\nClient feature that you can use to connect to vpn simply by importing your .ovpn file.\nIf you are using CLI, then you should install 'openvpn' packege. Rename the client vpn file from .ovpn to .conf and\nthen use command: sudo openvpn <client-file-path>"
 echo
 echo "************************************************************************************"
 echo
