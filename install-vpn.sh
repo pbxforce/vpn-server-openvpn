@@ -279,7 +279,7 @@ do
     read -p "Select Protocol (TCP/UDP): " pbx_proto
     if [[ $pbx_proto == "tcp" ]] || [[ $pbx_proto == "TCP" ]]
     then
-        sed -i 's/;proto tcp/proto tcp4/' $vpnconf_dir/server.conf
+        sed -i 's/;proto tcp/proto tcp/' $vpnconf_dir/server.conf
         sed -i 's/proto udp/;proto udp/' $vpnconf_dir/server.conf
         sed -i 's/explicit-exit-notify 1/;explicit-exit-notify 1/' $vpnconf_dir/server.conf
         echo
@@ -290,7 +290,7 @@ do
     elif [[ $pbx_proto == "udp" ]] || [[ $pbx_proto == "UDP" ]]
     then
         echo
-        sed -i 's/proto udp/proto udp4/' $vpnconf_dir/server.conf
+        sed -i 's/proto udp/proto udp/' $vpnconf_dir/server.conf
         pbx_proto='UDP'
         echo "Protocol is set to: $pbx_proto "
         pbx_proto='udp'
@@ -298,7 +298,7 @@ do
     elif [[ $pbx_proto == "" ]]
     then
         echo
-        sed -i 's/proto udp/proto udp4/' $vpnconf_dir/server.conf
+        sed -i 's/proto udp/proto udp/' $vpnconf_dir/server.conf
         echo "Protocol is set to: UDP"
         pbx_proto='udp'
         break
@@ -686,11 +686,11 @@ echo " "
 #cp $dest_client/client.conf $dest_client/$client_name.conf
 if [[ $pbx_proto = 'tcp' ]]
 then
-    sed -i 's/;proto tcp/proto tcp4/' $dest_client/client.conf
+    sed -i 's/;proto tcp/proto tcp/' $dest_client/client.conf
     sed -i 's/proto udp/;proto udp/' $dest_client/client.conf
 elif [[ $pbx_proto = 'udp' ]]
 then
-    sed -i 's/proto udp/proto udp4/' $dest_client/client.conf
+    sed -i 's/proto udp/proto udp/' $dest_client/client.conf
 fi
 #Editing Client Configuration file for server ip address
 while true
