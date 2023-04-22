@@ -40,4 +40,22 @@ Additional script file 'append.sh' is used to combine the encryption key files a
             sudo bash append.sh <set-file-name> <ca.crt> <YourCertFileName.crt> <YourKeyFileName.key>
 
 Make sure to run the script from the same directory where your key and certificate files are. A new file will be generated in the same directory.
+
+### Connecting to VPN
+
+You can use the client file to connect to VPN on windows, linux, and mac. 
+
+#### For windows:
+* Download OpenVPN Client Connect application from: https://openvpn.net/client-connect-vpn-for-windows/
+* Import your .ovpn client file and connect to the VPN
+
+#### For Linux: 
+You can connect to VPN in linux using two ways: GUI or CLI
+* If your are using KDE or GNOME desktop environment, then you will have in-build OpenVPN point in your Network settings. Import the .ovpn file and you can connect to your vpn.
+* If you are using CLI, then first you need to rename the file from .ovpn to .conf (ex: client.ovpn > client.conf). Install openvpn package in the system. run the below command to connect to VPN:
+
+            sudo openvpn --config client.conf
+            
+
+
     
