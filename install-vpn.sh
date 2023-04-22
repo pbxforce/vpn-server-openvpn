@@ -789,7 +789,7 @@ echo "*****                                                                     
 echo "************************************************************************************"
 echo "************************************************************************************"
 echo
-echo "Your Client VPN file is generated in /root directory."
+echo "Your Client VPN file is generated in current working directory."
 echo
 echo "************************************************************************************"
 echo
