@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This file is not being maintained.
+
 cat $dest_client/client.conf > $PWD/$1.ovpn
 file="$PWD/$1.ovpn"
 echo "<ca>" >> $file
