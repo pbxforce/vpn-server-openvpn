@@ -113,7 +113,7 @@ then
     echo " "
 else
     echo
-    echo "Distro is not supported yet. Stay tuned on GitHub: https://github.com/pbxforce/openvpn-Install.git"
+    echo "Distro is not supported yet. Stay tuned on GitHub: https://github.com/pbxforce/vpn-server-openvpn"
     exit
 fi
 #
@@ -203,7 +203,7 @@ then
     echo " "
     echo "OpenVPN Version: $(openvpn --version | head -1 | awk '{print$1,$2}') ....VERIFIED"
 else
-    echo -e "OpenVPN is not installed correctly. It could be a missing file or something.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git"
+    echo -e "OpenVPN is not installed correctly. It could be a missing file or something.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn"
     exit
 fi
 #
@@ -215,7 +215,7 @@ fi
 #     echo "$(git --version) ....VERFIED"
 # else
 #     echo
-#     echo -e "Git is not installed correctly. It could be a missing file or something.\naise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git"
+#     echo -e "Git is not installed correctly. It could be a missing file or something.\naise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn"
 # fi
 echo " "
 #
@@ -238,7 +238,7 @@ mkdir -p $vpnconf_dir/easy-rsa && cp -r $easyrsa/* $rsaconf_dir
 sleep 1
 if [[ -z $(ls $vpnconf_dir|grep 'sample-config-files') ]]
 then
-    echo -e "OpenVPN GitHub Package directory not found in the system. It could be Git Cloning failed or something.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git"
+    echo -e "OpenVPN GitHub Package directory not found in the system. It could be Git Cloning failed or something.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn"
     sleep 2
     exit
 else
@@ -251,7 +251,7 @@ sleep 1
 if [[ -z $(ls $vpnconf_dir|grep 'easy-rsa') ]]
 then
     echo
-    echo -e "Easy-rsa is not installed correctly. It could be a missing file or something.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git"
+    echo -e "Easy-rsa is not installed correctly. It could be a missing file or something.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn"
     exit
 else
     rsa_version="$($rsaconf_dir/./easyrsa | sed -n 2p | awk '{print$1,$2}')"
@@ -569,7 +569,7 @@ then
     echo 'set_var EASYRSA_PKI "/etc/openvpn/easy-rsa/pki"' >> $rsaconf_dir/vars
 else
     echo
-    echo -e 'Easyrsa Global Vars initilization failed. Make sure there is file named vars in easy-rsa directory.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git'
+    echo -e 'Easyrsa Global Vars initilization failed. Make sure there is file named vars in easy-rsa directory.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn'
     sleep 2
     exit
 fi
@@ -583,7 +583,7 @@ pki_verify=$(ls $rsaconf_dir|grep 'pki')
 if [[ $pki_verify != "pki" ]]
 then
     echo
-    echo -e 'Could not create PKI directory to save cert. and key files.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git'
+    echo -e 'Could not create PKI directory to save cert. and key files.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn'
     sleep 2
     exit
 fi
@@ -597,7 +597,7 @@ dh_verify=$(ls $rsapki_dir | grep dh.pem)
 if [[ $dh_verify != "dh.pem" ]]
 then
     echo
-    echo -e 'Could not generate Diffie-Hellman 2048 bit encryption key.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git'
+    echo -e 'Could not generate Diffie-Hellman 2048 bit encryption key.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn'
     sleep 2
     exit
 fi
@@ -611,7 +611,7 @@ ca_verify=$(ls $rsapki_dir | grep ca.crt)
 if [[ $ca_verify != "ca.crt" ]]
 then
     echo
-    echo -e 'Could not generate CA Utility.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git'
+    echo -e 'Could not generate CA Utility.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn'
     sleep 2
     exit
 fi
@@ -625,7 +625,7 @@ skc_verify=$(ls $rsapki_dir/private | grep server.key)
 if [[ $skc_verify != "server.key" ]]
 then
     echo
-    echo -e 'Could not Generate Server key or Certificate.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git'
+    echo -e 'Could not Generate Server key or Certificate.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn'
     sleep 2
     exit
 fi
@@ -761,7 +761,7 @@ then
         echo '******* OpenVPN Server is ACTIVE and RUNNING ********'
     else    
         echo
-        echo -e 'An error occurred in the final step.\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git' 
+        echo -e 'An error occurred in the final step.\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn' 
         sleep 2
         exit
     fi
@@ -772,7 +772,7 @@ then
     echo '******* OpenVPN Server is ACTIVE and RUNNING ********'
 else    
     echo
-    echo -e "Could not start $sys_chk\nRaise this issue to me on GitHub: https://github.com/pbxforce/openvpn-Install.git"
+    echo -e "Could not start $sys_chk\nRaise this issue to me on GitHub: https://github.com/pbxforce/vpn-server-openvpn"
     sleep 2
     exit
 
@@ -807,5 +807,5 @@ echo "**************************************************************************
 echo
 echo "OpenVPN files can be located on /etc/openvpn. Feel free to tune & tweak anything."
 echo
-echo "Any Issues ?? Let me know: https://github.com/pbxforce/openvpn-Install.git"
+echo "Any Issues ?? Let me know: https://github.com/pbxforce/vpn-server-openvpn"
 echo "-------------------------------------------------------------------------------------"
