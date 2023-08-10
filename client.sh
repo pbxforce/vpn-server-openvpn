@@ -102,6 +102,6 @@ sleep 1
 echo
 echo "************************************************************************************"
 echo
-echo "Any Issues ?? Let me know: https://github.com/pbxforce/openvpn-Install.git"
+echo "Any Issues ?? Let me know: https://github.com/pbxforce/vpn-server-openvpn"
 echo
 echo "************************************************************************************"
