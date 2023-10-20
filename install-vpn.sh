@@ -575,7 +575,8 @@ else
 fi
 #Generating PKI directory
 yes yes | $rsaconf_dir/./easyrsa init-pki 2>/dev/null >/dev/null &
-ln -s $rsaconf_dir/pki $PWD 
+sleep 2
+ln -s $PWD/pki $rsaconf_dir 
 echo " "
 loading 'Creating PKI Directory for Cert. and Keys' 3
 #Verifying wether the directory is created or not
