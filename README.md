@@ -9,6 +9,7 @@ Almost all Debian and Fedora distros are supported. New distros are being added 
 
 Simply run the bash script and follow the instructions: 
 
+            cd ~/vpn-server-openvpn
             sudo bash install-vpn.sh
 
 * Use this script to setup your own secure VPN Server where traffic will be encrypted with PKI using bidirectional authentication. Everything will be done automatically. Automatic system update is excluded because sometimes it takes too much time and it might not even necessary for the task. But you can update the system manually before running the script. It will reduce the script running time. If you get error in the inital packages installing phase, you should definatly perform system update and run the script again.
