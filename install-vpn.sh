@@ -563,8 +563,12 @@ echo " "
 clear
 echo "*********************Generating SSL Certtificates and Keys**************************"
 sleep 1
-vars_cfg=$(cat $rsaconf_dir/vars | grep -i "set_var easyrsa_pki" | awk '{print$2}')
-if [[ $vars_cfg = "EASYRSA_PKI" ]]
+###
+# this flow of identifying vars file presence does not work now ###
+#vars_cfg=$(cat $rsaconf_dir/vars | grep -i "set_var easyrsa_pki" | awk '{print$2}')
+#if [[ $vars_cfg = "EASYRSA_PKI" ]]
+###
+if [[ -f "$rsaconf_dir/vars" ]]
 then
     echo 'set_var EASYRSA_PKI "/etc/openvpn/easy-rsa/pki"' >> $rsaconf_dir/vars
 else
@@ -665,7 +669,11 @@ do
         break
     fi
 done
-yes yes|$rsaconf_dir/./easyrsa build-client-full $client_name client nopass 2>/dev/null >/dev/null &
+###
+# running easyrsa script with 'client' option does not work now, removing it
+#yes yes|$rsaconf_dir/./easyrsa build-client-full $client_name client nopass 2>/dev/null >/dev/null &
+###
+yes yes|$rsaconf_dir/./easyrsa build-client-full $client_name nopass 2>/dev/null >/dev/null &
 #
 #openSUSE openvpn package does not have client and server directories. Manually creating directories for openSUSE.
 if [[ -z $(ls $vpnconf_dir|grep 'client') ]]
