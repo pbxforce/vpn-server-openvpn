@@ -642,6 +642,7 @@ do
 done
 mv $vpnconf_dir/dh.pem $vpnconf_dir/dh2048.pem
 echo " "
+echo "dh /etc/openvpn/dh2048.pem" >> $vpnconf_dir/server.conf
 echo "Initiating Process to Generate Client Key and Certificate....."
 sleep 3
 clear
